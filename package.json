@@ -1,0 +1,19 @@
+{
+  "name": "scrapping_web",
+  "version": "1.0.0",
+  "description": "scrapping web using phantomjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Priambodo-Kurniawan/scrapping_web.git"
+  },
+  "author": "Priambodo-Kurniawan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Priambodo-Kurniawan/scrapping_web/issues"
+  },
+  "homepage": "https://github.com/Priambodo-Kurniawan/scrapping_web#readme"
+}
