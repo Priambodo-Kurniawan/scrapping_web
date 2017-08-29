@@ -54,6 +54,9 @@ var steps = [
           var link = arrCategories[j].href
           obj.categoryId = link.split('/category/')[1].split('/')[0]
           obj.categoryName = arrCategories[j].innerText
+          obj.productName = document.getElementsByClassName('product-name')[0].innerText
+          obj.productRatingScore = document.getElementsByClassName('percent-num')[0].innerText
+          obj.productRatingNumberOfVotes = document.getElementsByClassName('rantings-num')[0].innerText
           product.categories.push(obj)
         }
       }
