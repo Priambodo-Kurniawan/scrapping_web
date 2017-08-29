@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Priambodo-Kurniawan/scrapping_web/issues"
   },
-  "homepage": "https://github.com/Priambodo-Kurniawan/scrapping_web#readme"
+  "homepage": "https://github.com/Priambodo-Kurniawan/scrapping_web#readme",
+  "devDependencies": {
+    "phantomjs-polyfill-find": "github:ptim/phantomjs-polyfill-find"
+  }
 }
