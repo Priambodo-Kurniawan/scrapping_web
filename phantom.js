@@ -47,20 +47,29 @@ var steps = [
         product.pictures.push(img[i].baseURI)
       }
       product.categories = []
-      var arrCategories = document.querySelectorAll('.ui-breadcrumb > .container')[0].getElementsByTagName('a')
+      var arrCategories = document.querySelectorAll('.ui-breadcrumb > .container > a')
       for(var j = 0; j<arrCategories.length; j++){
         if(j > 1){
           var obj = {}
           var link = arrCategories[j].href
           obj.categoryId = link.split('/category/')[1].split('/')[0]
           obj.categoryName = arrCategories[j].innerText
-          obj.productName = document.getElementsByClassName('product-name')[0].innerText
-          obj.productRatingScore = document.getElementsByClassName('percent-num')[0].innerText
-          obj.productRatingNumberOfVotes = document.getElementsByClassName('rantings-num')[0].innerText
           product.categories.push(obj)
         }
       }
-      console.log(arrCategories);
+      product.productName = document.getElementsByClassName('product-name')[0].innerText
+      product.productRatingScore = document.getElementsByClassName('percent-num')[0].innerText
+      product.productRatingNumberOfVotes = document.getElementsByClassName('rantings-num')[0].innerText
+      product.numberOfOrder = document.getElementsByClassName('order-num')[0].innerText.split(' ')[0]
+      product.stockAvailable = document.getElementById('j-sell-stock-num').innerText.split(' ')[0]
+      product.numberWishlist = document.getElementsByClassName('wishlist-num')[0].innerHTML
+      product.shippingWeight = document.getElementsByClassName('packaging-item')[1].getElementsByClassName('packaging-des')[0].innerHTML
+      product.storeName = document.getElementsByClassName('shop-name')[0].getElementsByTagName('a')[0].innerText
+      product.storeId = document.getElementsByClassName('shop-name')[0].getElementsByTagName('a')[0].href.split('/store/')[1]
+      product.storeLocation = document.getElementsByClassName('store-address')[0].innerText
+      product.storeRating = document.querySelector('.positive-percent a').innerText
+      product.storeOpenSince = document.querySelector('.store-open-time span').innerText
+
       console.log(JSON.stringify(product));
     })
   }
